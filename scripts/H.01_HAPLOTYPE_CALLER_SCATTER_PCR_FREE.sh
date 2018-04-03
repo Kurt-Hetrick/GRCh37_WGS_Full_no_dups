@@ -62,8 +62,18 @@ $JAVA_1_7/java -jar $GATK_DIR/GenomeAnalysisTK.jar \
 --standard_min_confidence_threshold_for_calling 30 \
 --standard_min_confidence_threshold_for_emitting 10 \
 --max_alternate_alleles 3 \
+--annotation DepthPerSampleHC \
+--annotation ClippingRankSumTest \
+--annotation MappingQualityRankSumTest \
+--annotation ReadPosRankSumTest \
+--annotation FisherStrand \
+--annotation GCContent \
+--annotation AlleleBalanceBySample \
 --annotation AlleleBalance \
---annotation Coverage \
+--annotation QualByDepth
+--annotation FractionInformativeReads \
+--annotation StrandBiasBySample \
+--annotation StrandAlleleCountsBySample \
 --annotation MappingQualityZero \
 --pcr_indel_model NONE \
 -o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf.gz"
@@ -87,8 +97,18 @@ echo $JAVA_1_7/java -jar $GATK_DIR/GenomeAnalysisTK.jar \
 --standard_min_confidence_threshold_for_calling 30 \
 --standard_min_confidence_threshold_for_emitting 10 \
 --max_alternate_alleles 3 \
+--annotation DepthPerSampleHC \
+--annotation ClippingRankSumTest \
+--annotation MappingQualityRankSumTest \
+--annotation ReadPosRankSumTest \
+--annotation FisherStrand \
+--annotation GCContent \
+--annotation AlleleBalanceBySample \
 --annotation AlleleBalance \
---annotation Coverage \
+--annotation QualByDepth
+--annotation FractionInformativeReads \
+--annotation StrandBiasBySample \
+--annotation StrandAlleleCountsBySample \
 --annotation MappingQualityZero \
 --pcr_indel_model NONE \
 -o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf.gz" \
