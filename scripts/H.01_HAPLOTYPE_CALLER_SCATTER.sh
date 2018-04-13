@@ -61,12 +61,10 @@ $JAVA_1_7/java -jar $GATK_DIR/GenomeAnalysisTK.jar \
 --annotation GCContent \
 --annotation AlleleBalanceBySample \
 --annotation AlleleBalance \
---annotation QualByDepth
---annotation FractionInformativeReads \
+--annotation QualByDepth \
 --annotation StrandBiasBySample \
---annotation StrandAlleleCountsBySample \
 --annotation MappingQualityZero \
--o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf"
+-o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf.gz"
 
 END_HAPLOTYPE_CALLER=`date '+%s'`
 
@@ -95,12 +93,10 @@ echo $JAVA_1_7/java -jar $GATK_DIR/GenomeAnalysisTK.jar \
 --annotation GCContent \
 --annotation AlleleBalanceBySample \
 --annotation AlleleBalance \
---annotation QualByDepth
---annotation FractionInformativeReads \
+--annotation QualByDepth \
 --annotation StrandBiasBySample \
---annotation StrandAlleleCountsBySample \
 --annotation MappingQualityZero \
--o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf" \
+-o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf.gz" \
 >> $CORE_PATH/$PROJECT/COMMAND_LINES/$SM_TAG".COMMAND_LINES.txt"
 
 echo >> $CORE_PATH/$PROJECT/COMMAND_LINES/$SM_TAG".COMMAND_LINES.txt"

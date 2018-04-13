@@ -70,10 +70,8 @@ $JAVA_1_7/java -jar $GATK_DIR/GenomeAnalysisTK.jar \
 --annotation GCContent \
 --annotation AlleleBalanceBySample \
 --annotation AlleleBalance \
---annotation QualByDepth
---annotation FractionInformativeReads \
+--annotation QualByDepth \
 --annotation StrandBiasBySample \
---annotation StrandAlleleCountsBySample \
 --annotation MappingQualityZero \
 --pcr_indel_model NONE \
 -o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf.gz"
@@ -105,10 +103,8 @@ echo $JAVA_1_7/java -jar $GATK_DIR/GenomeAnalysisTK.jar \
 --annotation GCContent \
 --annotation AlleleBalanceBySample \
 --annotation AlleleBalance \
---annotation QualByDepth
---annotation FractionInformativeReads \
+--annotation QualByDepth \
 --annotation StrandBiasBySample \
---annotation StrandAlleleCountsBySample \
 --annotation MappingQualityZero \
 --pcr_indel_model NONE \
 -o $CORE_PATH/$PROJECT/TEMP/$SM_TAG"."$CHROMOSOME".g.vcf.gz" \
