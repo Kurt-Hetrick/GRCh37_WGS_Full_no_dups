@@ -1,0 +1,144 @@
+COLUMN,DESCRIPTION,PROGRAM,COMMENT,SOURCE
+SM_TAG,RIS_ID (CIDR internal database ID) at 2D barcode,,Read Group Sample tag,
+COUNT_DISC_HOM,Number of genotype array homozygous calls that were called heterozygous non-reference in the sequence data,cidrseqsuite code,PASS only,
+COUNT_CONC_HOM,Number of genotype array homozygous calls that were called homozygous non-reference in the sequence data,cidrseqsuite code,PASS only,
+PERCENT_CONC_HOM,COUNT_CONC_HOM/(COUNT_CONC_HOM + COUNT_DISC_HOM),cidrseqsuite code,PASS only,
+COUNT_DISC_HET,Number genotype array heterozygous calls that were called homozygous non-reference in the sequence data,cidrseqsuite code,PASS only,
+COUNT_CONC_HET,Number genotype array Heterozygous calls that were called heterozygous non-reference in the sequence data,cidrseqsuite code,PASS only,
+PERCENT_CONC_HET,COUNT_DISC_HOM/(COUNT_DISC_HOM + COUNT_DISC_HET),cidrseqsuite code,PASS only,
+PERCENT_TOTAL_CONC,(COUNT_DISC_HOM + COUNT_CONC_HOM)/(COUNT_DISC_HET + COUNT_DISC_HOM + COUNT_DISC_HOM + COUNT_CONC_HOM),cidrseqsuite code,PASS only,
+COUNT_HET_BEADCHIP,Number of genotype array heterozygous calls,cidrseqsuite code,,
+SENSITIVITY_2_HET,Percent of heterozygous array genotypes that are also called as non-reference bases in the sequencing data,cidrseqsuite code,PASS only,
+FREEMIX,Sequence-only estimate of contamination (0-1 scale),verifyBamID,,PMID: 23103226
+FREELK1, Maximum log-likelihood of the sequence reads given estimated contamination under sequence-only method,verifyBamID,,PMID: 23103226
+FREELK0,Log-likelihood of the sequence reads given no contamination under sequence-only method,verifyBamID,,PMID: 23103226
+COUNT.VERIFY.SITES.AVG.DP,Average sequencing depth at the sites that verifyBamID used to estimate cross-sample contamination,verifyBamID,,PMID: 23103226
+AUTO_AVG,"Mean autosomal ucsc coding exon coverage (20 MapQ, 10 baseQ, etc)…should be redundant with CODING_MEAN_CVG below",GATK/DepthOfCoverage,derived from sample_interval_summary.csv,
+X_AVG,chromosome X avg depth for coding regions.,GATK/DepthOfCoverage,derived from sample_interval_summary.csv,
+X_NORM,X_AVG/AUTO_AVG,GATK/DepthOfCoverage,derived from sample_interval_summary.csv,
+Y_AVG,chromosome Y avg depth for coding regions.,GATK/DepthOfCoverage,derived from sample_interval_summary.csv,
+Y_NORM,Y_AVG/AUTO_AVG,GATK/DepthOfCoverage,derived from sample_interval_summary.csv,
+WG_MEAN_CVG,"Mean autosomal coverage after filtering (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+WG_PCT_5x,"Pct of autosomal bases with 5x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+WG_PCT_10x,"Pct of autosomal bases with 10x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+WG_PCT_15x,"Pct of autosomal bases with 15x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+WG_PCT_20x,"Pct of autosomal bases with 20x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+CODING_MEAN_CVG,"Mean autosomal ucsc coding exon coverage (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+CODING_PCT_5x,"Pct of autosomal ucsc coding bases with 5x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+CODING_PCT_10x,"Pct of autosomal ucsc coding with 10x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+CODING_PCT_15x,"Pct of autosomal ucsc coding with 5x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+CODING_PCT_20x,"Pct of autosomal ucsc coding with 5x or greater coverage after filtered (20 MapQ, 10 baseQ, etc)",GATK/DepthOfCoverage,sample_summary.csv,PMID: 20644199
+WG_ALL_TI_TV_COUNT,count of SNVs across whole genome,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+WG_ALL_TI_TV_RATIO,ti/tv ratio of above,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+WG_KNOWN_TI_TV_COUNT,count of SNVs across whole genome in dbsnp 129,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+WG_KNOWN_TI_TV_RATIO,ti/tv ratio of above,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+WG_NOVEL_TI_TV_COUNT,count of SNVs across whole genome not in dbsnp 129,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+WG_NOVEL_TI_TV_RATIO,ti/tv ratio of above,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+CODING_ALL_TI_TV_COUNT,count of SNVs in ucsc coding exons,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+CODING_ALL_TI_TV_RATIO,ti/tv ratio of above,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+CODING_KNOWN_TI_TV_COUNT,count of SNVs in ucsc coding exons in dbsnp 129,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+CODING_KNOWN_TI_TV_RATIO,ti/tv ratio of above,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+CODING_NOVEL_TI_TV_COUNT,count of SNVs in ucsc coding exons not in dbsnp 129,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+CODING_NOVEL_TI_TV_RATIO,ti/tv ratio of above,vcfutils.pl qstats,PASS only,distributed with SAMtools source code
+PERCENT_SNV_WG_SNP138,percent of SNVs in dbSNP 138 (PASS),,PASS only,
+PERCENT_SNV_CODING_SNP138,percent of coding exon SNVs in dbSNP 138 (PASS),,PASS only,
+COUNT_INDEL_WG,Count of indels (including mixed variants) in whole genome,,PASS only,
+PERCENT_INDEL_WG_SNP138,Percent of indels (including mixed variants) in whole genome found in dbSNP 138,,PASS only,
+I_GT15_COUNT_WG,Count of insertions (that are not mixed or non-reference hets) greater than 15 bp in whole genome,,PASS only,
+I_GT15_PCT.DBSNP_WG,Percent of insertions (that are not mixed or non-reference hets) greater than 15 bp in dbSNP 138 in whole genome,,PASS only,
+D_GT15_COUNT_WG,Count of deletions (that are not mixed or non-reference hets) greater than 15 bp in whole genome,,PASS only,
+D_GT15_PCT.DBSNP_WG,Percent of deletions (that are not mixed or non-reference hets) greater than 15 bp in dbSNP 138 in whole genome,,PASS only,
+I_LT15_COUNT_WG,Count of insertions (that are not mixed or non-reference hets) less than 15 bp in whole genome,,PASS only,
+I_LT15_PCT.DBSNP_WG,Percent of insertions (that are not mixed or non-reference hets) less than 15 bp in dbSNP 138 in whole genome,,PASS only,
+D_LT15_COUNT_WG,Count of deletions (that are not mixed or non-reference hets) less than 15 bp in whole genome,,PASS only,
+D_LT15_PCT.DBSNP_WG,Percent of deletions (that are not mixed or non-reference hets) less than 15 bp in dbSNP 138 in whole genome,,PASS only,
+I_D_RATIO_WG,Insertion/deletion ratio (that are not mixed or non-reference hets) for the whole genome,,PASS only,
+I_D_RATIO_GT15_WG,Insertion/deletion ratio (that are not mixed or non-reference hets) for the whole genome for indels greater than 15 bp,,PASS only,
+I_D_RATIO_LT15_WG,Insertion/deletion ratio (that are not mixed or non-reference hets) for the whole genome for indels less than 15 bp,,PASS only,
+I_1AND2_VS_3_WG,Ratio for 1 and 2 bp insertions vs 3 bp insertion in the whole genome (that are not mixed or non-reference hets),,PASS only,
+D_1AND2_VS_3_WG,Ratio for 1 and 2 bp deletions vs 3 bp insertion in the whole genome (that are not mixed or non-reference hets),,PASS only,
+COUNT_INDEL_CODING,Count of indels (including mixed variants) in ucsc coding exons,,PASS only,
+PERCENT_INDEL_CODING_SNP138,Percent of indels (including mixed variants) in ucsc coding exons,,PASS only,
+I_GT15_COUNT_CODING,Count of insertions (that are not mixed or non-reference hets) greater than 15 bp in ucsc coding exons,,PASS only,
+I_GT15_PCT.DBSNP_CODING,Percent of insertions (that are not mixed or non-reference hets) greater than 15 bp in dbSNP 138 in ucsc coding exons,,PASS only,
+D_GT15_COUNT_CODING,Count of deletions (that are not mixed or non-reference hets) greater than 15 bp in ucsc coding exons,,PASS only,
+D_GT15_PCT.DBSNP_CODING,Percent of deletions (that are not mixed or non-reference hets) greater than 15 bp in dbSNP 138 in ucsc coding exons,,PASS only,
+I_LT15_COUNT_CODING,Count of insertions (that are not mixed or non-reference hets) less than 15 bp in ucsc coding exons,,PASS only,
+I_LT15_PCT.DBSNP_CODING,Percent of insertions (that are not mixed or non-reference hets) less than 15 bp in dbSNP 138 in ucsc coding exons,,PASS only,
+D_LT15_COUNT_CODING,Count of deletions (that are not mixed or non-reference hets) less than 15 bp in ucsc coding exons,,PASS only,
+D_LT15_PCT.DBSNP_CODING,Percent of deletions (that are not mixed or non-reference hets) less than 15 bp in dbSNP 138 in ucsc coding exons,,PASS only,
+I_D_RATIO_CODING,Insertion/deletion ratio (that are not mixed or non-reference hets) for the ucsc coding exons,,PASS only,
+I_D_RATIO_GT15_CODING,Insertion/deletion ratio (that are not mixed or non-reference hets) for the ucsc coding exons for indels greater than 15 bp,,PASS only,
+I_D_RATIO_LT15_CODING,Insertion/deletion ratio (that are not mixed or non-reference hets) for the ucsc coding exons for indels less than 15 bp,,PASS only,
+I_1AND2_VS_3_CODING,Ratio for 1 and 2 bp insertions vs 3 bp insertion in the ucsc coding exons  (that are not mixed or non-reference hets),,PASS only,
+D_1AND2_VS_3_CODING,Ratio for 1 and 2 bp deletions vs 3 bp insertion in the ucsc coding exons  (that are not mixed or non-reference hets),,PASS only,
+COUNT_MIXED_WG,Count of mixed variants in the whole genome,,PASS only,
+PERCENT_MIXED_WG_SNP138,Percent of mixed variants in the whole genome that overlaps with dbSNP 138,,PASS only,
+COUNT_MIXED_CODING,Count of mixed variants in the coding exons,,PASS only,
+PERCENT_MIXED_CODING_SNP138,Percent of mixed variants in the coding exons that overlaps with dbSNP 138,,PASS only,
+UNPAIRED_READS_EXAMINED,"The number of mapped reads examined which did not have a mapped mate pair, either because the read is unpaired, or the read is paired to an unmapped mate.",DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+READ_PAIRS_EXAMINED,"The number of mapped read pairs examined. (Primary, non-supplemental)",DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+UNMAPPED_READS,"The total number of unmapped reads examined. (Primary, non-supplemental)",DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+UNPAIRED_READ_DUPLICATES,The number of fragments that were marked as duplicates.,DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+READ_PAIR_DUPLICATES,The number of read pairs that were marked as duplicates.,DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+READ_PAIR_OPTICAL_DUPLICATES,"The number of read pairs duplicates that were caused by optical duplication. Value is always < READ_PAIR_DUPLICATES, which counts all duplicates regardless of source.",DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+PERCENT_DUPLICATION,The fraction of mapped sequence that is marked as duplicate.,DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+ESTIMATED_LIBRARY_SIZE,The estimated number of unique molecules in the library based on PE duplication.,DuplicationMetrics,,https://broadinstitute.github.io/picard/picard-metric-definitions.html#DuplicationMetrics
+MEDIAN_INSERT_SIZE,The MEDIAN insert size of all paired end reads where both ends mapped to the same chromosome.,CollectInsertSizeMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics
+MEDIAN_ABSOLUTE_DEVIATION_INSERT_SIZE,The median absolute deviation of the distribution. If the distribution is essentially normal then the standard deviation can be estimated as ~1.4826 * MAD,CollectInsertSizeMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics
+MEAN_INSERT_SIZE,"The mean insert size of the ""core"" of the distribution. Artefactual outliers in the distribution often cause calculation of nonsensical mean and stdev values. To avoid this the distribution is first trimmed to a ""core"" distribution of +/- N median absolute deviations around the median insert size. By default N=10, but this is configurable.",CollectInsertSizeMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics
+STANDARD_DEVIATION,"Standard deviation of insert sizes over the ""core"" of the distribution.",CollectInsertSizeMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics
+PF_NOISE_READS_R1,The number of PF reads that are marked as noise reads. A noise read is one which is composed entirely of A bases and/or N bases. These reads are marked as they are usually artifactual and are of no use in downstream analysis. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_READS_ALIGNED_R1,The number of PF reads that were aligned to the reference sequence. This includes reads that aligned with low quality (i.e. their alignments are ambiguous). Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_PF_READS_ALIGNED_R1,The percentage of PF reads that aligned to the reference sequence. PF_READS_ALIGNED / PF_READS. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_ALIGNED_BASES_R1,"The total number of aligned bases, in all mapped PF reads, that are aligned to the reference sequence. Read 1.",CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_READS_R1,The number of PF reads that were aligned to the reference sequence with a mapping quality of Q20 or higher signifying that the aligner estimates a 1/100 (or smaller) chance that the alignment is wrong. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_BASES_R1,The number of bases aligned to the reference sequence in reads that were mapped at high quality. Will usually approximate PF_HQ_ALIGNED_READS * READ_LENGTH but may differ when either mixed read lengths are present or many reads are aligned with gaps. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_Q20_BASES_R1,The subset of PF_HQ_ALIGNED_BASES where the base call quality was Q20 or higher. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_MEDIAN_MISMATCHES_R1,The median number of mismatches versus the reference sequence in reads that were aligned to the reference at high quality (i.e. PF_HQ_ALIGNED READS). Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_MISMATCH_RATE_R1,The rate of bases mismatching the reference for all bases aligned to the reference sequence. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ERROR_RATE_R1,The percentage of bases that mismatch the reference in PF HQ aligned reads. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_INDEL_RATE_R1,"The number of insertion and deletion events per 100 aligned bases. Uses the number of events as the numerator, not the number of inserted or deleted bases. Read 1.",CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_READS_ALIGNED_IN_PAIRS_R1,The percentage of reads whose mate pair was also aligned to the reference. READS_ALIGNED_IN_PAIRS / PF_READS_ALIGNED. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+BAD_CYCLES_R1,The number of instrument cycles in which 80% or more of base calls were no-calls. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+STRAND_BALANCE_R1,The number of PF reads aligned to the positive strand of the genome divided by the number of PF reads aligned to the genome. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_ADAPTER_R1,The percentage of PF reads that are unaligned and match to a known adapter sequence right from the start of the read. Read 1.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_NOISE_READS_R2,The number of PF reads that are marked as noise reads. A noise read is one which is composed entirely of A bases and/or N bases. These reads are marked as they are usually artifactual and are of no use in downstream analysis. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_READS_ALIGNED_R2,The number of PF reads that were aligned to the reference sequence. This includes reads that aligned with low quality (i.e. their alignments are ambiguous). Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_PF_READS_ALIGNED_R2,The percentage of PF reads that aligned to the reference sequence. PF_READS_ALIGNED / PF_READS. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_ALIGNED_BASES_R2,"The total number of aligned bases, in all mapped PF reads, that are aligned to the reference sequence. Read 2.",CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_READS_R2,The number of PF reads that were aligned to the reference sequence with a mapping quality of Q20 or higher signifying that the aligner estimates a 1/100 (or smaller) chance that the alignment is wrong. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_BASES_R2,The number of bases aligned to the reference sequence in reads that were mapped at high quality. Will usually approximate PF_HQ_ALIGNED_READS * READ_LENGTH but may differ when either mixed read lengths are present or many reads are aligned with gaps. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_Q20_BASES_R2,The subset of PF_HQ_ALIGNED_BASES where the base call quality was Q20 or higher. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_MEDIAN_MISMATCHES_R2,The median number of mismatches versus the reference sequence in reads that were aligned to the reference at high quality (i.e. PF_HQ_ALIGNED READS). Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_MISMATCH_RATE_R2,The rate of bases mismatching the reference for all bases aligned to the reference sequence. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ERROR_RATE_R2,The percentage of bases that mismatch the reference in PF HQ aligned reads. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_INDEL_RATE_R2,"The number of insertion and deletion events per 100 aligned bases. Uses the number of events as the numerator, not the number of inserted or deleted bases. Read 2.",CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_READS_ALIGNED_IN_PAIRS_R2,The percentage of reads whose mate pair was also aligned to the reference. READS_ALIGNED_IN_PAIRS / PF_READS_ALIGNED. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+BAD_CYCLES_R2,The number of instrument cycles in which 80% or more of base calls were no-calls. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+STRAND_BALANCE_R2,The number of PF reads aligned to the positive strand of the genome divided by the number of PF reads aligned to the genome. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_ADAPTER_R2,The percentage of PF reads that are unaligned and match to a known adapter sequence right from the start of the read. Read 2.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+TOTAL_READS,The total number of PF reads.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_NOISE_READS_PAIR,The number of PF reads that are marked as noise reads. A noise read is one which is composed entirely of A bases and/or N bases. These reads are marked as they are usually artifactual and are of no use in downstream analysis. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_READS_ALIGNED_PAIR,The number of PF reads that were aligned to the reference sequence. This includes reads that aligned with low quality (i.e. their alignments are ambiguous). Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_PF_READS_ALIGNED_PAIR,The percentage of PF reads that aligned to the reference sequence. PF_READS_ALIGNED / PF_READS. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_ALIGNED_BASES_PAIR,"The total number of aligned bases, in all mapped PF reads, that are aligned to the reference sequence. Pair.",CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_READS_PAIR,The number of PF reads that were aligned to the reference sequence with a mapping quality of Q20 or higher signifying that the aligner estimates a 1/100 (or smaller) chance that the alignment is wrong. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_BASES_PAIR,The number of bases aligned to the reference sequence in reads that were mapped at high quality. Will usually approximate PF_HQ_ALIGNED_READS * READ_LENGTH but may differ when either mixed read lengths are present or many reads are aligned with gaps. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ALIGNED_Q20_BASES_PAIR,The subset of PF_HQ_ALIGNED_BASES where the base call quality was Q20 or higher. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_MEDIAN_MISMATCHES_PAIR,The median number of mismatches versus the reference sequence in reads that were aligned to the reference at high quality (i.e. PF_HQ_ALIGNED READS). Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_MISMATCH_RATE_PAIR,The median number of mismatches versus the reference sequence in reads that were aligned to the reference at high quality (i.e. PF_HQ_ALIGNED READS). Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_HQ_ERROR_RATE_PAIR,The percentage of bases that mismatch the reference in PF HQ aligned reads. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PF_INDEL_RATE_PAIR,"The number of insertion and deletion events per 100 aligned bases. Uses the number of events as the numerator, not the number of inserted or deleted bases. Pair.",CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+MEAN_READ_LENGTH,The mean read length of the set of reads examined. When looking at the data for a single lane with equal length reads this number is just the read length. When looking at data for merged lanes with differing read lengths this is the mean read length of all reads.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+READS_ALIGNED_IN_PAIRS,The number of aligned reads whose mate pair was also aligned to the reference.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_READS_ALIGNED_IN_PAIRS_PAIR,The percentage of reads whose mate pair was also aligned to the reference. READS_ALIGNED_IN_PAIRS / PF_READS_ALIGNED. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+BAD_CYCLES_PAIR,The number of instrument cycles in which 80% or more of base calls were no-calls. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+STRAND_BALANCE_PAIR,The number of PF reads aligned to the positive strand of the genome divided by the number of PF reads aligned to the genome. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_CHIMERAS,The percentage of reads that map outside of a maximum insert size (usually 100kb) or that have the two ends mapping to different chromosomes.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+PCT_ADAPTER_PAIR,The percentage of PF reads that are unaligned and match to a known adapter sequence right from the start of the read. Pair.,CollectAlignmentSummaryMetrics,,http://broadinstitute.github.io/picard/picard-metric-definitions.html#AlignmentSummaryMetrics
+COUNT_SV,"Total lumpy-sv SV count that were genotyped by SVTyper, VCF start recorded was on Chr 1-22,X,Y,MT. Was not in LCR region or regions that commonly have very high depth",,,"PMID: 24970577, 26258291"
+COUNT_DEL,"lumpy-sv deletion count that were genotyped by SVTyper, VCF start recorded was on Chr 1-22,X,Y,MT. Was not in LCR region or regions that commonly have very high depth",,,"PMID: 24970577, 26258291"
+COUNT_DUP,"LUMPY duplication count that were genotyped by SVTyper, VCF start recorded was on Chr 1-22,X,Y,MT. Was not in LCR region or regions that commonly have very high depth",,,"PMID: 24970577, 26258291"
+COUNT_INV,"lumpy-sv inversion count that were genotyped by SVTyper, VCF start recorded was on Chr 1-22,X,Y,MT. Was not in LCR region or regions that commonly have very high depth",,,"PMID: 24970577, 26258291"
+COUNT_BND,"lumpy-sv BND count that were genotyped by SVTyper, VCF start recorded was on Chr 1-22,X,Y,MT. Was not in LCR region or regions that commonly have very high depth",,,"PMID: 24970577, 26258291"
